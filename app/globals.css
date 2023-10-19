@@ -38,7 +38,7 @@
 /* END: General styles */
 /* START: Navbar styles */
 .navbar {
-  @apply flex justify-between items-center z-10 text-black-100 border-b border-gray-100;
+  @apply flex justify-between items-center z-10 text-blue-100 border-b border-gray-100;
 }
 /* END: Navbar styles */
 /* START: Hero styles */
