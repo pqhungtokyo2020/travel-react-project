@@ -3,8 +3,8 @@ import "./globals.css";
 import { Footer, NavBar } from "@components";
 
 export const metadata = {
-  title: "Car Hub",
-  description: "Discover world's best car showcase application",
+  title: "Travel",
+  description: "Discover world's most beautiful places and travel destinations.",
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
