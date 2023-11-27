@@ -14,7 +14,7 @@ export default function TourList() {
     <div className="tour-card-sub-list bg-red-100">
       <div>
         <span className="tour-card-sub-list-title">
-          <img className="mx-1" src="/icon/calendar.png" alt="Image" height="32" width="32"/>
+          <img className="mx-1" src="/icon/calendar.png" alt="Image" height="32" width="32" />
           おすすめツアー
         </span>
       </div>
