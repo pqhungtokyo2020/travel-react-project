@@ -1,6 +1,5 @@
 "use client";
-import Image from "next/image";
-export default function TourList() {
+export default function TourHikaeri() {
 
   const truncateString = (str: string, num: number) => {
     if (str.length > num) {
@@ -11,16 +10,25 @@ export default function TourList() {
   }
 
   return (
-    <div className="tour-card-sub-list bg-sky-100">
-      <div>
-        <span className="tour-card-sub-list-title">
-          <img className="mx-1" src="/icon/calendar.png" alt="Image" height="32" width="32"/>
-          日帰りツアー
-        </span>
+    <div className="tour-card-sub-list border my-10">
+      <div className="flex w-full">
+        <div className="w-1/2">
+          <span className="tour-card-sub-list-title">
+            <img className="mx-1" src="/icon/calendar.png" alt="Image" height="" width="40" />
+            日帰りツアー
+          </span>
+        </div>
+        <div className="w-1/2 text-right mr-6">
+          <span className="decoration-1">
+            <a href="" className="text-gray-500 underline underline-offset-1">
+              すべて表示
+            </a>
+          </span>
+        </div>
       </div>
-      <div className="tour-card-sub-list-content flex">
+      <div className="w-full tour-card-sub-list-content flex flex-wrap">
         {
-          [1, 2, 3, 4, 5].map(item => {
+          [1, 2, 3, 4, 5,6,7,8,9,10].map(item => {
             return <div className="tour-sublist-item">
               <div className="relative">
                 <img className="w-full" src={`tourimages/image${item}.jpg`} alt="Image"/>
@@ -50,8 +58,14 @@ export default function TourList() {
                   </div>
                   <span className="orange-start font-bold">4.4</span>
                 </div>
-                <div className="flex text-sm font-bold pt-1.5 text-gray-700">
-                  <span>50,000円から～</span>
+                <div className="flex text-sm pt-1.5 text-gray-700 flex w-full">
+                  <div className="w-3/5">
+                    <span>50,000円～</span>
+                  </div>
+                  <div className="w-2/5 flex">
+                    <span><img className="mx-1" src="/icon/heart-icon-gray.png" alt="Image" height="" width="20" /></span>
+                    <span className="text-gray-500 text-sm">1k+件</span>
+                  </div>
                 </div>
               </div>
             </div>

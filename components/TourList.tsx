@@ -1,5 +1,4 @@
 "use client";
-import Image from "next/image";
 export default function TourList() {
 
   const truncateString = (str:string, num:number) => {
@@ -12,7 +11,7 @@ export default function TourList() {
   return (
     <div className="tour-card-list">
       {
-        [1, 2, 3, 4, 5, 6, 7].map(item => {
+        [1, 2, 3, 4, 5, 6, 7,8,9,10].map(item => {
           return <div className="tour-item">
             <div className="relative">
               <img className="w-full" src={`tourimages/image${item}.jpg`} alt="Image" />

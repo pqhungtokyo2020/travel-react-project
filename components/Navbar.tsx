@@ -23,20 +23,41 @@ const NavBar = () => (
             </div>
 
             <div className="flex gap-4 md:gap-2 w-11/12 justify-end pr-5">
-              <Link href='/aboutUs' className='flex rounded-full items-center px-4 hover:bg-gray-100' >
+              <form className="mr-16">
+                <div className="relative">
+                  <div className="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
+                    <svg className="w-4 h-4 text-gray-500 dark:text-gray-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
+                      <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z" />
+                    </svg>
+                  </div>
+                  <input type="search" id="default-search" className="flex w-full p-3 ps-12
+                    text-sm text-gray-500 rounded-full bg-gray-100 outline-none h-12"
+                    placeholder="ツアー検索" />
+                </div>
+              </form>
+
+              <Link href='/aboutUs' className='flex rounded-full items-center px-4 hover:bg-gray-100 h-10' >
+                <img className="mx-1 border" src="/icon/japanflag.png" alt="Image" height="" width="35" />
+                日本語
+              </Link>
+              <Link href='/aboutUs' className='flex rounded-full items-center px-4 hover:bg-gray-100 h-10' >
+                JPY
+              </Link>
+
+              <Link href='/aboutUs' className='flex rounded-full items-center px-4 hover:bg-gray-100 h-10' >
                 国内ツアー
               </Link>
-              <Link href='/aboutUs' className='flex rounded-full items-center px-4 hover:bg-gray-100' >
+              <Link href='/aboutUs' className='flex rounded-full items-center px-4 hover:bg-gray-100 h-10' >
                 海外ツアー
               </Link>
-              <Link href='/aboutUs' className='flex rounded-full items-center font-bold px-4 hover:bg-gray-100'>
+              <Link href='/aboutUs' className='flex rounded-full items-center font-bold px-4 hover:bg-gray-100 h-10'>
                 会員登録（無料）
               </Link>
               <CustomButton
                 title='ログイン'
                 btnType='button'
                 containerStyles='bg-orange-500 text-primary-blue rounded-full 
-                  text-white font-bold'
+                  text-white font-bold h-10 shadow-lg'
               />
             </div>
           </div>

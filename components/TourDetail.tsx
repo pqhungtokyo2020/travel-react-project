@@ -1,5 +1,6 @@
 "use client";
-export default function TourList() {
+import DateComponent from "@/components/DateComponent";
+export default function TourDetail() {
 
   const truncateString = (str: string, num: number) => {
     if (str.length > num) {
@@ -10,7 +11,7 @@ export default function TourList() {
   }
 
   return (
-    <div className="tour-detail">
+    <div className="tour-detail my-20">
       <div className="row w-full flex">
         <div className="tour-detail-image m-2">
           <div className="main-detail-image">
@@ -91,17 +92,17 @@ export default function TourList() {
               </p>
             </div>
             <div className="pt-5 text-center">
-              <button className="items-end bg-orange-500 hover:bg-orange-400 
+              <a href="#booking" className="items-end bg-orange-500 hover:bg-orange-400 
               text-white font-bold py-2 px-10 border-b-4 border-orange-700 
               hover:border-orange-500 rounded ">
                 予約する
-              </button>
+              </a>
             </div>
           </div>
         </div>
       </div>
 
-      <div className=" row w-full">
+      <div className=" row w-full my-20">
         <div className="tour-detail-highlight m-4 w-12/12 border rounded-xl shadow-xl">
           <div className="tour-detail-title bg-sky-100 flex pl-5 rounded-t-xl">
             <span className="font-bold pt-3">ハイライト</span>
@@ -128,7 +129,7 @@ export default function TourList() {
         </div>
       </div>
 
-      <div className="row w-full flex">
+      <div className="row w-full flex mb-20">
         <div className="tour-detail-schedule m-4 w-3/4 border rounded-xl shadow-xl">
           <div className="tour-detail-title bg-sky-100 flex pl-5 rounded-t-xl">
             <span className="font-bold pt-3">スケジュール</span>
@@ -155,39 +156,44 @@ export default function TourList() {
 
                     <p className="mb-4 text-base font-normal text-slate-600 p-3">
                       ホテル又は指定の集合場所へお迎え(ご自身で移動いただく事もございます)
+                      <img className="w-full h-full rounded-xl tour-schedule-item-image" src="tourimages/schedule_image.jpg" alt="Image" />
                     </p>
 
                     <time className="block mb-2 font-normal leading-none 
                   text-neutral-500 mt-4 bg-sky-100 p-2 w-1/4 rounded-r-2xl">◆ 9:30頃</time>
                     <p className="mb-4 text-base font-normal text-slate-600 p-3">
                       バッチャン村に到着、バッチャン焼きのお店・工房見学へご案内いたします。
+                      <img className="w-full h-full rounded-xl tour-schedule-item-image" src="tourimages/schedule_image.jpg" alt="Image" />
                     </p>
 
                     <time className="block mb-2 font-normal leading-none 
                   text-neutral-500 mt-4 bg-sky-100 p-2 w-1/4 rounded-r-2xl">◆ 10:30頃</time>
                     <p className="mb-4 text-base font-normal text-slate-600 p-3">
                       バッチャン村出発、ハロン湾へむけて出発
+                      <img className="w-full h-full rounded-xl tour-schedule-item-image" src="tourimages/schedule_image.jpg" alt="Image" />
                     </p>
 
                     <time className="block mb-2 font-normal leading-none 
                   text-neutral-500 mt-4 bg-sky-100 p-2 w-1/4 rounded-r-2xl">◆ 12:30頃</time>
                     <p className="mb-4 text-base font-normal text-slate-600 p-3">
                       ハロン湾到着
+                      <img className="w-full h-full rounded-xl tour-schedule-item-image" src="tourimages/schedule_image.jpg" alt="Image" />
                     </p>
 
                     <time className="block mb-2 font-normal leading-none 
                   text-neutral-500 mt-4 bg-sky-100 p-2 w-1/4 rounded-r-2xl">◆ 12:30～15:30頃</time>
                     <p className="mb-4 text-base font-normal text-slate-600 p-3">
                       ハロン湾クルーズ観光とシーフードの昼食をお楽しみ頂きます。途中、鍾乳洞も訪問します。
+                      <img className="w-full h-full rounded-xl tour-schedule-item-image" src="tourimages/schedule_image.jpg" alt="Image" />
                     </p>
 
                     <time className="block mb-2 font-normal leading-none 
                   text-neutral-500 mt-4 bg-sky-100 p-2 w-1/4 rounded-r-2xl">◆ 18:30頃</time>
                     <p className="mb-4 text-base font-normal text-slate-600 p-3">
                       ホテルまたは指定集合場所に到着。解散となります
+                      <img className="w-full h-full rounded-xl tour-schedule-item-image" src="tourimages/schedule_image.jpg" alt="Image" />
                     </p>
                   </li>
-
                 })
               }
 
@@ -203,56 +209,58 @@ export default function TourList() {
           </div>
         </div>
 
-        <div className="w-1/4 border m-4 rounded-xl shadow-xl">
-          <div className="tour-detail-title bg-sky-100 flex pl-5 rounded-t-xl">
-            <span className="font-bold pt-3">おすすめツアー</span>
-          </div>
-          <div className="p-4">
-            {
-              [1, 2, 3, 4, 5, 6, 7].map(item => {
-                return <div className="tour-detail-subitem row w-full border rounded-xl mb-4">
-                  <div className="">
-                    <div className="relative">
-                      <img className="w-full rounded-t-xl" src={`tourimages/image${item}.jpg`} alt="Image" />
-                    </div>
-                    <div className="p-4">
-                      <div className="">
-                        <h2 className="font-bold text-sm mb-2 tour-tite">{truncateString('ホンダベイ パラワンアイランドホッピング日帰りツアーホンダベイ パラワンアイランドホッピング日帰りツアーホンダベイ パラワンアイランドホッピング日帰りツアー', 24)}
-                        </h2>
+        <div className="w-1/4 m-4">
+          <div className="rounded-xl shadow-xl border">
+            <div className="tour-detail-title bg-sky-100 flex pl-5 rounded-t-xl">
+              <span className="font-bold pt-3">おすすめツアー</span>
+            </div>
+            <div className="p-4">
+              {
+                [1, 2, 3, 4, 5, 6, 7].map(item => {
+                  return <div className="tour-detail-subitem row w-full border rounded-xl mb-4">
+                    <div className="">
+                      <div className="relative">
+                        <img className="w-full rounded-t-xl" src={`tourimages/image${item}.jpg`} alt="Image" />
                       </div>
-                      <div className="text-sm mb-2 flex">
-                        <div className="flex items-center space-x-1 pr-2">
-                          <svg className="w-4 h-4 orange-start" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
-                            <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
-                          </svg>
-                          <svg className="w-4 h-4 orange-start" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
-                            <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
-                          </svg>
-                          <svg className="w-4 h-4 orange-start" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
-                            <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
-                          </svg>
-                          <svg className="w-4 h-4 orange-start" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
-                            <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
-                          </svg>
-                          <svg className="w-4 h-4 text-gray-300 dark:text-gray-500" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
-                            <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
-                          </svg>
+                      <div className="p-4">
+                        <div className="">
+                          <h2 className="font-bold text-sm mb-2 tour-tite">{truncateString('ホンダベイ パラワンアイランドホッピング日帰りツアーホンダベイ パラワンアイランドホッピング日帰りツアーホンダベイ パラワンアイランドホッピング日帰りツアー', 24)}
+                          </h2>
                         </div>
-                        <span className="orange-start font-bold">4.4</span>
-                      </div>
-                      <div className="flex text-sm font-bold pt-1.5 text-gray-700">
-                        <span>50,000円から～</span>
+                        <div className="text-sm mb-2 flex">
+                          <div className="flex items-center space-x-1 pr-2">
+                            <svg className="w-4 h-4 orange-start" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
+                              <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
+                            </svg>
+                            <svg className="w-4 h-4 orange-start" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
+                              <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
+                            </svg>
+                            <svg className="w-4 h-4 orange-start" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
+                              <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
+                            </svg>
+                            <svg className="w-4 h-4 orange-start" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
+                              <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
+                            </svg>
+                            <svg className="w-4 h-4 text-gray-300 dark:text-gray-500" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
+                              <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
+                            </svg>
+                          </div>
+                          <span className="orange-start font-bold">4.4</span>
+                        </div>
+                        <div className="flex text-sm font-bold pt-1.5 text-gray-700">
+                          <span>50,000円から～</span>
+                        </div>
                       </div>
                     </div>
                   </div>
-                </div>
-              })
-            }
+                })
+              }
+            </div>
           </div>
         </div>
       </div>
 
-      <div className="row w-full">
+      <div className="row w-full mb-20">
         <div className="tour-detail-comment m-4 w-12/12 border rounded-xl shadow-xl">
           <div className="tour-detail-title bg-sky-100 flex pl-5 rounded-t-xl">
             <span className="font-bold pt-3">クチコミ</span>
@@ -313,6 +321,115 @@ export default function TourList() {
                 </div>
               })
             }
+          </div>
+        </div>
+      </div>
+
+      <div id="booking" className="row w-full mb-20">
+        <div className="tour-detail-highlight m-4 w-12/12 border rounded-xl shadow-xl">
+          <div className="tour-detail-title bg-sky-100 flex pl-5 rounded-t-xl">
+            <span className="font-bold pt-3">予約する</span>
+          </div>
+          <div className="tour-detail-highlight-content">
+            <div className="flex">
+              <div className="m-8 w-3/5">
+                <form className="w-full max-w-lg">
+                  <div className="flex flex-wrap">
+                    <label className="mb-2 font-semibold">ツアー種類</label>
+                    <ul className="items-center w-full bg-white sm:flex mb-6">
+                      <li className="w-1/5 border border-gray-200 rounded-lg mr-2">
+                        <div className="flex items-center ps-3">
+                          <input id="" type="radio" value=""
+                            name="list-radio" className="w-4 h-4 text-blue-600 bg-gray-100 
+                      border-gray-300 focus:ring-blue-500 focus:ring-2" />
+                          <label className="w-full py-3 ms-2 text-sm font-medium 
+                        text-gray-900">1泊2日</label>
+                        </div>
+                      </li>
+                      <li className="w-1/5 border border-gray-200 rounded-lg mx-2">
+                        <div className="flex items-center ps-3">
+                          <input id="" type="radio" value=""
+                            name="list-radio" className="w-4 h-4 text-blue-600 bg-gray-100 
+                      border-gray-300 focus:ring-blue-500 focus:ring-2" />
+                          <label className="w-full py-3 ms-2 text-sm font-medium 
+                        text-gray-900">2泊3日</label>
+                        </div>
+                      </li>
+
+                      <li className="w-1/5 border border-gray-200 rounded-lg mx-2">
+                        <div className="flex items-center ps-3">
+                          <input id="" type="radio" value=""
+                            name="list-radio" className="w-4 h-4 text-blue-600 bg-gray-100 
+                      border-gray-300 focus:ring-blue-500 focus:ring-2" />
+                          <label className="w-full py-3 ms-2 text-sm font-medium 
+                        text-gray-900">3泊4日</label>
+                        </div>
+                      </li>
+
+                      <li className="w-1/5 border border-gray-200 rounded-lg mx-2">
+                        <div className="flex items-center ps-3">
+                          <input id="" type="radio" value=""
+                            name="list-radio" className="w-4 h-4 text-blue-600 bg-gray-100 
+                      border-gray-300 focus:ring-blue-500 focus:ring-2" />
+                          <label className="w-full py-3 ms-2 text-sm font-medium 
+                        text-gray-900">4泊5日</label>
+                        </div>
+                      </li>
+                    </ul>
+
+                    <div className="w-full md:w-1/2 mb-6">
+                      <label className="font-semibold">開始日</label>
+                      <div className="relative w-full my-2 tour-detail-date">
+                        <DateComponent />
+                      </div>
+                    </div>
+
+                    <div className="w-full md:w-1/2 mb-6">
+                      <label className="font-semibold mb-2 ml-3">終了日</label>
+                      <div className="relative w-full my-2 tour-detail-date ml-3 pb-6">
+                        <DateComponent />
+                      </div>
+                    </div>
+                    <div className="w-full md:w-1/2">
+                      <label className="mb-2 font-semibold">大人人数</label>
+                      <input className="border-gray-200 rounded-lg w-full text-gray-700 border rounded py-3 px-4 my-2 leading-tight focus:outline-none focus:bg-white" id="grid-first-name" type="text" placeholder="1" />
+                    </div>
+                    <div className="w-full md:w-1/2">
+                      <label className="mb-2 ml-2 font-semibold">子供人数</label>
+                      <input className="border-gray-200 rounded-lg w-full text-gray-700 border rounded py-3 px-4 my-2 mx-3 leading-tight focus:outline-none focus:bg-white" id="grid-first-name" type="text" placeholder="1" />
+                    </div>
+                  </div>
+                </form>
+              </div>
+              <div className="w-2/5 m-4">
+                <label className="font-semibold">お支払い方法</label>
+                <div className="w-full flex flex-wrap mt-4">
+                  <div className="tour-detail-paid-icon rounded-xl border p-4 mx-2 mb-4">
+                    <img className="w-full h-9" src="/icon/mastercard.png" alt="Image" />
+                  </div>
+                  <div className="tour-detail-paid-icon rounded-xl border p-4 mx-2 mb-4">
+                    <img className="w-full h-9" src="/icon/visacard.png" alt="Image" />
+                  </div>
+                  <div className="tour-detail-paid-icon rounded-xl border p-4 mx-2 mb-4">
+                    <img className="w-full h-9" src="/icon/jcbcard.png" alt="Image" />
+                  </div>
+                  <div className="tour-detail-paid-icon rounded-xl border p-4 mx-2 mb-4">
+                    <img className="w-full h-9" src="/icon/americancard.png" alt="Image" />
+                  </div>
+                  <div className="tour-detail-paid-icon rounded-xl border p-4 mx-2 mb-4">
+                    <img className="w-full h-9" src="/icon/paypallogo.png" alt="Image" />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="mt-6 text-right border-t-2 border-orange-500 p-6 mx-8">
+              <span className="font-semibold pr-4 text-orange-500">合計：50,000円</span><span className="text-gray-700 mr-20">(税込み)</span>
+              <a href="#booking" className="items-end bg-orange-500 hover:bg-orange-400 
+              text-white font-bold py-2 px-10 border-b-4 border-orange-700 
+              hover:border-orange-500 rounded ">
+                確認する
+              </a>
+            </div>
           </div>
         </div>
       </div>
