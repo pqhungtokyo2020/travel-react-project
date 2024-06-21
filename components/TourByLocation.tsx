@@ -10,7 +10,7 @@ export default function TourByLocation() {
   }
 
   return (
-    <div className="tour-by-location flex items-start text-black-100 mx-8 flex-wrap rounded-2xl">
+    <div className="tour-by-location flex items-start text-black-100 mx-8 mt-8 flex-wrap rounded-2xl">
       <div className="flex">
         <div className="tour-by-location-item border mr-2 rounded-2xl shadow-xl">
           <div className="relative m-2">
