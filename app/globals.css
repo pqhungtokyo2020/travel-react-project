@@ -49,9 +49,74 @@
   background-color: #f5f5f5;
 }
 
+.nav-search-box:focus-within {
+  border: solid 1px;
+  border-color: rgb(249 115 22 / var(--tw-bg-opacity)) !important;
+  --tw-bg-opacity: 1;
+}
+
 .sticky-top {
   background: #FFFFFF;
 }
+
+.btn-login {
+  background-color: rgb(249 115 22 / var(--tw-bg-opacity));
+    --tw-bg-opacity: 1;
+    color: #fff;
+}
+
+.btn-login:hover {
+  opacity: .8;
+}
+
+/* Login*/
+.light-cyan-bg {
+  background-color: #f5f5f5;
+}
+
+.login-box {
+  color: #757575;
+}
+.login-form-input {
+  background-color: #FFFFFF;
+  border-radius: 8px;
+  padding: 2px;
+  border: solid 1px #eee;
+}
+
+.login-form-input input {
+  --tw-text-opacity: 1;
+  color: rgb(102 102 102 / var(--tw-text-opacity));
+}
+
+.login-form-input:focus-within {
+  border: solid 1px;
+  border-color: rgb(249 115 22 / var(--tw-bg-opacity)) !important;
+  --tw-bg-opacity: 1;
+}
+
+.login-form input:focus {
+  outline: none;
+}
+
+.login-form input[type=checkbox] {
+  accent-color:#ff5b22;
+}
+
+.login-form .orange-txt {
+  color: rgb(249 115 22 / var(--tw-bg-opacity)) !important;
+  --tw-bg-opacity: 1;
+}
+
+
+
+.green-btn-primary:hover,
+.orange-btn-primary:hover {
+    opacity: .8;
+}
+
+/* Login End */
+
 
 /* END: Navbar styles */
 /* START: Hero styles */
@@ -78,15 +143,41 @@
 .hero .search-box {
   position: absolute;
   margin-top: 500px;
-  margin-left: 10%;
-  width: 80%;
-  height: 80px;
+  margin-left: 4%;
+  width: 92%;
+  height: 90px;
   z-index: 3;
-  background-color: rgba(255, 255, 255, 0.7);
+  background-color: #FFFFFF;
   border-radius: 9999px;
+  --tw-bg-opacity: 1;
+}
+
+.hero .search-box .search-box-item {
+  border: solid 1px;
+  border-color:#e6e6e6;
+  height: 45px;
+}
+
+.hero .search-box .search-box-item:focus-within {
+  border: solid 1px;
+  border-color: rgb(249 115 22 / var(--tw-bg-opacity)) !important;
+  --tw-bg-opacity: 1;
+}
+
+.hero .search-box input:focus {
+  outline: none;
 }
 
 
+.hero .search-box .search-link {
+  background-color: rgb(249 115 22 / var(--tw-bg-opacity));
+  --tw-bg-opacity: 1;
+  color: #fff;
+}
+
+.hero .search-box .search-link:hover {
+  opacity: 0.8;
+}
 /* END: Hero styles */
 
 /* START: Home styles */
@@ -252,8 +343,12 @@
   @apply flex  p-6 items-start text-black-100 m-8 flex-wrap;
 }
 
-.tour-card-list {
+.title-banner {
   margin-top: 120px !important
+}
+
+.tour-card-list .title {
+  background-color: #f5f5f5;
 }
 
 .tour-card-sub-list {
@@ -261,14 +356,48 @@
 }
 
 
-.tour-item {
-  @apply rounded-xl overflow-hidden shadow-lg m-3;
+.tour-card-list select {
+  height: 40px;
+  padding: 10px;
+  border-radius: 6px
 }
 
-.tour-item{
-  width: calc((100% / 3) - 1.5rem);
-  transition-duration: 0.2s;
+
+.tour-card-list option:hover {
+  background-color: #f5f5f5;
 }
+
+
+.tour-item {
+  @apply rounded-xl overflow-hidden m-3;
+}
+
+.tour-item {
+  width: calc((100% / 4) - 1.5rem);
+  transition-duration: 0.2s;
+  border: solid 1px;
+  border-color: #e6e6e6;
+}
+
+
+.tour-item .language-support {
+  color: rgb(117, 117, 117);
+  border: solid 1px;
+  border-color: rgb(245, 245, 245);
+  background-color: rgb(245, 245, 245);
+  border-radius: 6px;
+}
+
+.tour-item .sales {
+  background-color: #fff0e5;
+  border: solid 1px;
+  border-color: rgb(249 115 22 / var(--tw-bg-opacity));
+  color: rgb(249 115 22 / var(--tw-bg-opacity));
+  border-radius: 6px;
+  --tw-bg-opacity: 1;
+}
+
+
 
 .tour-group-item {
   width: calc((100% / 6) - 1.5rem);
@@ -305,6 +434,23 @@
 .tour-sublist-item {
   width: calc((100% / 5) - 1.5rem);
   transition-duration: 0.2s;
+}
+
+.tour-card-sub-list .paging .item {
+  background-color: #fff0e5;
+  border: solid 1px;
+  border-color: rgb(249 115 22 / var(--tw-bg-opacity));
+  color: rgb(249 115 22 / var(--tw-bg-opacity));
+  --tw-bg-opacity: 1;
+  border-radius: 100%;
+  width: 35px;
+  height: 35px;
+}
+
+.tour-card-sub-list .paging .item:hover {
+  background-color: rgb(249 115 22 / var(--tw-bg-opacity));
+  --tw-bg-opacity: 1;
+  color: #fff;
 }
 
 .tour-price {

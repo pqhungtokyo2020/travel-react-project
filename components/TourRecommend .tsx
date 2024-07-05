@@ -1,4 +1,7 @@
 "use client";
+
+import Link from "next/link";
+
 export default function TourRecommend() {
 
   const truncateString = (str: string, num: number) => {
@@ -20,9 +23,9 @@ export default function TourRecommend() {
         </div>
         <div className="w-1/2 text-right mr-6">
           <span className="decoration-1">
-            <a href="" className="text-gray-500 underline underline-offset-1">
-              すべて表示
-            </a>
+            <Link className="text-gray-500 underline underline-offset-1" href="/tour-list">
+             すべて表示
+            </Link>
           </span>
         </div>
       </div>
@@ -72,6 +75,44 @@ export default function TourRecommend() {
           })
 
         }
+      </div>
+      <div className="paging mt-5 justify-center w-full flex">
+        <span className="item mx-2 items-center flex justify-center">
+          <Link href="#">&lt;&lt;</Link>
+        </span>
+        <span className="item mx-2 items-center flex justify-center">
+          <Link href="#">01</Link>
+        </span>
+        <span className="item mx-2 items-center flex justify-center">
+          <Link href="#">02</Link>
+        </span>
+        <span className="item mx-2 items-center flex justify-center">
+          <Link href="#">03</Link>
+        </span>
+        <span className="item mx-2 items-center flex justify-center">
+          <Link href="#">04</Link>
+        </span>
+        <span className="item mx-2 items-center flex justify-center">
+          <Link href="#">05</Link>
+        </span>
+        <span className="item mx-2 items-center flex justify-center">
+          <Link href="#">06</Link>
+        </span>
+        <span className="item mx-2 items-center flex justify-center">
+          <Link href="#">07</Link>
+        </span>
+        <span className="item mx-2 items-center flex justify-center">
+          <Link href="#">08</Link>
+        </span>
+        <span className="item mx-2 items-center flex justify-center">
+          <Link href="#">09</Link>
+        </span>
+        <span className="item mx-2 items-center flex justify-center">
+          <Link href="#">10</Link>
+        </span>
+        <span className="item mx-2 items-center flex justify-center">
+          <Link href="#">&gt;&gt;</Link>
+        </span>
       </div>
     </div>
   );

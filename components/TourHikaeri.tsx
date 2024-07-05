@@ -1,4 +1,7 @@
 "use client";
+
+import Link from "next/link";
+
 export default function TourHikaeri() {
 
   const truncateString = (str: string, num: number) => {
@@ -20,18 +23,18 @@ export default function TourHikaeri() {
         </div>
         <div className="w-1/2 text-right mr-6">
           <span className="decoration-1">
-            <a href="" className="text-gray-500 underline underline-offset-1">
+            <Link className="text-gray-500 underline underline-offset-1" href="/tour-list">
               すべて表示
-            </a>
+            </Link>
           </span>
         </div>
       </div>
       <div className="w-full tour-card-sub-list-content flex flex-wrap">
         {
-          [1, 2, 3, 4, 5,6,7,8,9,10].map(item => {
+          [1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map(item => {
             return <div className="tour-sublist-item">
               <div className="relative">
-                <img className="w-full" src={`tourimages/image${item}.jpg`} alt="Image"/>
+                <img className="w-full" src={`tourimages/image${item}.jpg`} alt="Image" />
               </div>
               <div className="p-4">
                 <div className="">
@@ -71,6 +74,44 @@ export default function TourHikaeri() {
             </div>
           })
         }
+      </div>
+      <div className="paging mt-5 justify-center w-full flex">
+        <span className="item mx-2 items-center flex justify-center">
+          <Link href="#">&lt;&lt;</Link>
+        </span>
+        <span className="item mx-2 items-center flex justify-center">
+          <Link href="#">01</Link>
+        </span>
+        <span className="item mx-2 items-center flex justify-center">
+          <Link href="#">02</Link>
+        </span>
+        <span className="item mx-2 items-center flex justify-center">
+          <Link href="#">03</Link>
+        </span>
+        <span className="item mx-2 items-center flex justify-center">
+          <Link href="#">04</Link>
+        </span>
+        <span className="item mx-2 items-center flex justify-center">
+          <Link href="#">05</Link>
+        </span>
+        <span className="item mx-2 items-center flex justify-center">
+          <Link href="#">06</Link>
+        </span>
+        <span className="item mx-2 items-center flex justify-center">
+          <Link href="#">07</Link>
+        </span>
+        <span className="item mx-2 items-center flex justify-center">
+          <Link href="#">08</Link>
+        </span>
+        <span className="item mx-2 items-center flex justify-center">
+          <Link href="#">09</Link>
+        </span>
+        <span className="item mx-2 items-center flex justify-center">
+          <Link href="#">10</Link>
+        </span>
+        <span className="item mx-2 items-center flex justify-center">
+          <Link href="#">&gt;&gt;</Link>
+        </span>
       </div>
     </div>
   );
