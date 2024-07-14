@@ -10,19 +10,7 @@ export default function Login() {
       </p>
       <div className="w-full p-5">
         <form className="w-full login-form">
-          <div className="w-full flex mb-5">
-            <div className="w-1/5  text-lg items-center flex">
-              名前
-            </div>
-            <div className="w-4/5 items-center login-form-input flex">
-              <div className="w-1/12 justify-center flex">
-                <svg className="h-6 w-6 green-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">  <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />  <circle cx="12" cy="7" r="4" /></svg>
-              </div>
-              <div className="w-11/12 p-1">
-                <input className="w-full h-10 text-lg" type="text" name="email" placeholder="名前を入力してください" />
-              </div>
-            </div>
-          </div>
+          
           <div className="w-full flex mb-5">
             <div className="w-1/5  text-lg items-center flex">
               メールアドレス
@@ -34,60 +22,6 @@ export default function Login() {
               <div className="w-11/12 p-1">
                 <input className="w-full h-10 text-lg" type="text" name="email" placeholder="メールアドレスを入力してください" />
               </div>
-            </div>
-          </div>
-          <div className="w-full flex mb-5">
-            <div className="w-1/5  text-lg items-center flex">
-              電話番号
-            </div>
-            <div className="w-4/5 items-center login-form-input flex">
-              <div className="w-1/12 justify-center flex">
-                <svg className="h-6 w-6 green-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">  <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" /></svg>
-              </div>
-              <div className="w-11/12 p-1">
-                <input className="w-full h-10 text-lg" type="text" name="email" placeholder="電話番号を入力してください" />
-              </div>
-            </div>
-          </div>
-          <div className="w-full flex mb-5">
-            <div className="w-1/5  text-lg items-center flex">
-              パスワード
-            </div>
-            <div className="w-4/5 items-center login-form-input flex">
-              <div className="w-1/12 justify-center flex mx-2">
-                <svg className="h-6 w-6 " fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 7a2 2 0 012 2m4 0a6 6 0 01-7.743 5.743L11 17H9v2H7v2H4a1 1 0 01-1-1v-2.586a1 1 0 01.293-.707l5.964-5.964A6 6 0 1121 9z" />
-                </svg>
-              </div>
-              <div className="w-11/12 p-1">
-                <input className="w-full h-10 text-lg" type="text" name="password" placeholder="パスワードを入力してください" />
-              </div>
-            </div>
-          </div>
-          <div className="w-full flex mb-5">
-            <div className="w-1/5  text-lg items-center flex">
-              パスワード確認
-            </div>
-            <div className="w-4/5 items-center login-form-input flex">
-              <div className="w-1/12 justify-center flex mx-2">
-                <svg className="h-6 w-6 " fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 7a2 2 0 012 2m4 0a6 6 0 01-7.743 5.743L11 17H9v2H7v2H4a1 1 0 01-1-1v-2.586a1 1 0 01.293-.707l5.964-5.964A6 6 0 1121 9z" />
-                </svg>
-              </div>
-              <div className="w-11/12 p-1">
-                <input className="w-full h-10 text-lg" type="text" name="password" placeholder="パスワードを再度入力してください" />
-              </div>
-            </div>
-          </div>
-          <div className="w-full flex mb-5">
-            <div className="w-1/5  text-lg items-center flex">
-            </div>
-            <div className="w-4/5 items-center flex">
-              <input className="w-4 h-4 mr-2" type="checkbox" name="policy" id="policy-box" defaultChecked={true} />
-              <label className="policy-label">
-                <Link href="#" className="mx-1 orange-txt text-lg">ポリシー</Link>
-                <span className="text-lg">を同意する</span>
-              </label>
             </div>
           </div>
           <div className="w-full flex justify-center flex my-5">

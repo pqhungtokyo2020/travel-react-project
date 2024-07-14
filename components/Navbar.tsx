@@ -1,8 +1,9 @@
 "use client"
 import Link from "next/link";
 import Image from "next/image";
-import CustomButton from "./CustomButton";
 import { useEffect, useState } from "react";
+import LoginModal from "@/components/LoginModal";
+import RegistModal from "@/components/RegistModal";
 
 const NavBar = () => {
   const [isStickyTop, setStickyTop] = useState<boolean>(false);
@@ -25,9 +26,12 @@ const NavBar = () => {
     }
   };
 
-  return <header className={`w-full z-10`}>
-    <nav className='max-w-[1440px] mx-auto flex justify-between items-center sm:px-16 px-6'>
-      <div className={`top-main-nav  justify-between-full fixed z-40 w-full left-0 top-0 ${isStickyTop ? "sticky-top" : ""}`}>
+  const [showLogin, setShowLogin] = useState(false);
+  const [showRegist, setShowRegist] = useState(false);
+
+  return <header className="w-full z-10">
+    <nav className="max-w-[1440px] mx-auto flex justify-between items-center sm:px-16 px-6">
+      <div id="main-nav" className={`top-main-nav  justify-between-full fixed z-40 w-full left-0 top-0 ${isStickyTop ? "sticky-top" : ""}`}>
         <div className="flex flex-auto items-center mx-auto px-6 xl:container">
           <div className="flex mx-auto flex-auto justify-between items-center 
           relative">
@@ -71,12 +75,14 @@ const NavBar = () => {
               <Link href='/tour-list' className='top-main-nav-link flex rounded-3xl items-center px-4  h-10' >
                 海外ツアー
               </Link>
-              <Link href='/regist' className='top-main-nav-link flex rounded-3xl items-center px-4  h-10'>
+              <Link href='#' className='top-main-nav-link flex rounded-3xl items-center px-4  h-10' onClick={() => setShowRegist(true)}>
                 会員登録（無料）
               </Link>
-              <Link href='/login' className='btn-login flex rounded-3xl items-center px-4  h-10 font-bold'>
+              <RegistModal show={showRegist} onClose={() => setShowRegist(false)} />
+              <Link href='#' className='btn-login flex rounded-3xl items-center px-4  h-10 font-bold' onClick={() => setShowLogin(true)}>
                 ログイン
               </Link>
+              <LoginModal show={showLogin} onClose={() => setShowLogin(false)} />
             </div>
           </div>
         </div>

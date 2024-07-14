@@ -1,6 +1,6 @@
 "use client";
 import Link from 'next/link';
-import SelectBox from '../components/SelectBox';
+import SelectBox from '../components/common/SelectBox';
 export default function TourList() {
 
   const truncateString = (str: string, num: number) => {
@@ -27,7 +27,6 @@ export default function TourList() {
         <img className="w-full" src={`tourimages/img_tna_activity_list_hero_desktop_2x.jpg`} alt="Image" />
       </div>
       <div className="tour-card-list flex">
-
         <div className="title w-full my-5 flex">
           <div className="w-3/4 py-3 pl-5">
             <h2 className="text-2xl font-bold">おすすめツアー</h2>

@@ -41,7 +41,7 @@ const Hero = () => {
           </div>
           <div className="items-center flex">
             <span className="search-link px-8 py-3 rounded-lg font-bold">
-              <Link href="#" className="">検索</Link>
+              <Link href="/search-result" className="">検索</Link>
             </span>
           </div>
         </form>
