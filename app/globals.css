@@ -651,11 +651,11 @@ select {
 
 
 .tour-detail-image {
-  width: 55%;
+  width: 57%;
 }
 
 .tour-detail-info {
-  width: 45%;
+  width: 43%;
 }
 
 .tour-detail-title {
@@ -669,9 +669,9 @@ select {
 
 
 .tour-schedule-item-image {
-  width: 450px;
+  width: 90px;
   height: auto;
-  margin-top: 15px;
+  margin-top: 10px;
 }
 
 .tour-detail-schedule-icon {
@@ -689,8 +689,6 @@ select {
 .tour-detail-date input {
   outline: none;
 }
-
-.tour-by-location {}
 
 .tour-by-location-item {
   width: calc((100% / 7) - 0.5rem);
@@ -711,4 +709,75 @@ select {
 
 /*
 * Tour Style End
+*/
+
+/*
+* ImageCarousel Start
+*/
+.sliderContainer {
+  width: 95%;
+  margin: auto;
+}
+
+.mainSliderWrapper {
+  position: relative;
+}
+
+.mainSlider {
+  margin-bottom: 10px;
+
+}
+
+.mainImage {
+  width: 100%;
+  height: auto;
+  border-radius: 4px;
+}
+
+.thumbnailContainer {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.thumbnail {
+  border: 2px solid transparent;
+  transition: border 0.3s;
+  cursor: pointer;
+}
+
+.thumbnail.active {
+  border: 2px solid rgb(239 68 68);
+}
+
+.thumbnailImage {
+  width: 100px;
+  height: auto;
+}
+
+.prevButton, .nextButton {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.prevButton {
+  left: 0;
+}
+
+.nextButton {
+  right: 0;
+}
+
+.prevButton:hover, .nextButton:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+/*
+* ImageCarousel End
 */

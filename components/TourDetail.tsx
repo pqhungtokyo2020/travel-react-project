@@ -1,5 +1,7 @@
 "use client";
 import DateComponent from "@/components/DateComponent";
+import ImageCarousel from "@/components/common/ImageCarousel";
+
 export default function TourDetail() {
 
   const truncateString = (str: string, num: number) => {
@@ -10,24 +12,26 @@ export default function TourDetail() {
     }
   }
 
+  const images: string[] = [
+    'tourimages/image1.jpg',
+    'tourimages/image2.jpg',
+    'tourimages/image3.jpg',
+    'tourimages/image4.jpg',
+    'tourimages/image5.jpg',
+    'tourimages/image6.jpg',
+    'tourimages/image7.jpg',
+    'tourimages/image8.jpg',
+    'tourimages/image9.jpg',
+    'tourimages/image10.jpg'
+  ];
+
   return (
     <div className="tour-detail my-20">
       <div className="row w-full flex">
-        <div className="tour-detail-image m-2">
-          <div className="main-detail-image">
-            <img className="w-full h-full rounded-xl" src="tourimages/image1.jpg" alt="Image" />
-          </div>
-          <div className="sub-detail-image mt-2 flex">
-            {
-              [1, 2, 3, 4, 5].map(item => {
-                return <div className="sub-detail-image-item m-1">
-                  <img className="w-full h-full rounded-xl" src={`tourimages/image${item}.jpg`} alt="Image" />
-                </div>
-              })
-            }
-          </div>
+        <div className="tour-detail-image items-center flex py-4">
+          <ImageCarousel images={images} />
         </div>
-        <div className="tour-detail-info border m-2 rounded-xl shadow-xl">
+        <div className="tour-detail-info border m-2 rounded-xl">
           <div className="">
             <div className="bg-orange-500 rounded-tr-lg rounded-tl-xl p-3 font-bold text-white flex">
               <h1>50,0000円　～　10,0000円 (税込み）</h1>
@@ -47,18 +51,6 @@ export default function TourDetail() {
             <div className="text-sm my-2.5 flex">
               <div className="flex items-center space-x-1 pr-2">
                 <svg className="w-4 h-4 orange-start" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
-                  <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
-                </svg>
-                <svg className="w-4 h-4 orange-start" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
-                  <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
-                </svg>
-                <svg className="w-4 h-4 orange-start" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
-                  <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
-                </svg>
-                <svg className="w-4 h-4 orange-start" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
-                  <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
-                </svg>
-                <svg className="w-4 h-4 text-gray-300 dark:text-gray-500" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
                   <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
                 </svg>
               </div>
@@ -81,9 +73,8 @@ export default function TourDetail() {
             </div>
 
             <div className="">
-              <span className="inline-block bg-green-500 rounded-full px-3 py-1 text-xs font-normal text-white mr-2 mb-2">日本語ガイド</span>
-              <span className="inline-block bg-cyan-500 rounded-full px-3 py-1 text-xs font-normal text-white mr-2 mb-2">キャンセル無料</span>
-              <span className="inline-block bg-red-500 rounded-full px-3 py-1 text-xs font-normal text-white mr-2 mb-2">20% OFF</span>
+              <span className="language-support inline-block  p-1 text-sm mr-2 mb-2">日本語ガイド</span>
+              <span className="sales inline-block p-1  text-sm  mb-2">20% OFF</span>
             </div>
             <div className="py-3">
               <p className="text-gray-700 text-sm leading-loose">
@@ -103,14 +94,14 @@ export default function TourDetail() {
       </div>
 
       <div className=" row w-full my-20">
-        <div className="tour-detail-highlight m-4 w-12/12 border rounded-xl shadow-xl">
+        <div className="tour-detail-highlight m-4 w-12/12 border rounded-xl">
           <div className="tour-detail-title bg-sky-100 flex pl-5 rounded-t-xl">
             <span className="font-bold pt-3">ハイライト</span>
           </div>
           <div className="tour-detail-highlight-content">
             {
               [1, 2, 3, 4, 5, 6, 7].map(item => {
-                return <div className="m-5 tour-detail-highlight-content-item p-4 flex shadow rounded-xl">
+                return <div className="m-5 tour-detail-highlight-content-item p-4 flex rounded-xl">
                   <div className="w-2/5">
                     <img className="w-11/12 rounded-xl" src="tourimages/image5.jpg" alt="Image" />
                   </div>
@@ -130,7 +121,7 @@ export default function TourDetail() {
       </div>
 
       <div className="row w-full flex mb-20">
-        <div className="tour-detail-schedule m-4 w-3/4 border rounded-xl shadow-xl">
+        <div className="tour-detail-schedule m-4 w-3/4 border rounded-xl">
           <div className="tour-detail-title bg-sky-100 flex pl-5 rounded-t-xl">
             <span className="font-bold pt-3">スケジュール</span>
           </div>
@@ -153,45 +144,41 @@ export default function TourDetail() {
                     </h3>
                     <time className="block mb-2 font-normal leading-none 
                   text-neutral-500 mt-4 bg-sky-100 p-2 w-1/4 rounded-r-2xl">◆ 8:00頃</time>
-
-                    <p className="mb-4 text-base font-normal text-slate-600 p-3">
-                      ホテル又は指定の集合場所へお迎え(ご自身で移動いただく事もございます)
-                      <img className="w-full h-full rounded-xl tour-schedule-item-image" src="tourimages/schedule_image.jpg" alt="Image" />
+                    <p className="mb-4 text-base font-normal text-slate-600 p-1">
+                      ・ホテル又は指定の集合場所へお迎え(ご自身で移動いただく事もございます)
+                    </p>
+                    <p className="mb-4 text-base font-normal text-slate-600 p-1">
+                      ・ホテル又は指定の集合場所へお迎え(ご自身で移動いただく事もございます)
                     </p>
 
                     <time className="block mb-2 font-normal leading-none 
                   text-neutral-500 mt-4 bg-sky-100 p-2 w-1/4 rounded-r-2xl">◆ 9:30頃</time>
-                    <p className="mb-4 text-base font-normal text-slate-600 p-3">
-                      バッチャン村に到着、バッチャン焼きのお店・工房見学へご案内いたします。
-                      <img className="w-full h-full rounded-xl tour-schedule-item-image" src="tourimages/schedule_image.jpg" alt="Image" />
+                    <p className="mb-4 text-base font-normal text-slate-600 p-1">
+                      ・バッチャン村に到着、バッチャン焼きのお店・工房見学へご案内いたします。
                     </p>
 
                     <time className="block mb-2 font-normal leading-none 
                   text-neutral-500 mt-4 bg-sky-100 p-2 w-1/4 rounded-r-2xl">◆ 10:30頃</time>
-                    <p className="mb-4 text-base font-normal text-slate-600 p-3">
-                      バッチャン村出発、ハロン湾へむけて出発
-                      <img className="w-full h-full rounded-xl tour-schedule-item-image" src="tourimages/schedule_image.jpg" alt="Image" />
+                    <p className="mb-4 text-base font-normal text-slate-600 p-1">
+                      ・バッチャン村出発、ハロン湾へむけて出発
                     </p>
 
                     <time className="block mb-2 font-normal leading-none 
                   text-neutral-500 mt-4 bg-sky-100 p-2 w-1/4 rounded-r-2xl">◆ 12:30頃</time>
-                    <p className="mb-4 text-base font-normal text-slate-600 p-3">
-                      ハロン湾到着
-                      <img className="w-full h-full rounded-xl tour-schedule-item-image" src="tourimages/schedule_image.jpg" alt="Image" />
+                    <p className="mb-4 text-base font-normal text-slate-600 p-1">
+                      ・ハロン湾到着
                     </p>
 
                     <time className="block mb-2 font-normal leading-none 
                   text-neutral-500 mt-4 bg-sky-100 p-2 w-1/4 rounded-r-2xl">◆ 12:30～15:30頃</time>
-                    <p className="mb-4 text-base font-normal text-slate-600 p-3">
-                      ハロン湾クルーズ観光とシーフードの昼食をお楽しみ頂きます。途中、鍾乳洞も訪問します。
-                      <img className="w-full h-full rounded-xl tour-schedule-item-image" src="tourimages/schedule_image.jpg" alt="Image" />
+                    <p className="mb-4 text-base font-normal text-slate-600 p-1">
+                      ・ハロン湾クルーズ観光とシーフードの昼食をお楽しみ頂きます。途中、鍾乳洞も訪問します。
                     </p>
 
                     <time className="block mb-2 font-normal leading-none 
                   text-neutral-500 mt-4 bg-sky-100 p-2 w-1/4 rounded-r-2xl">◆ 18:30頃</time>
-                    <p className="mb-4 text-base font-normal text-slate-600 p-3">
-                      ホテルまたは指定集合場所に到着。解散となります
-                      <img className="w-full h-full rounded-xl tour-schedule-item-image" src="tourimages/schedule_image.jpg" alt="Image" />
+                    <p className="mb-4 text-base font-normal text-slate-600 p-1">
+                      ・ホテルまたは指定集合場所に到着。解散となります
                     </p>
                   </li>
                 })
@@ -210,7 +197,7 @@ export default function TourDetail() {
         </div>
 
         <div className="w-1/4 m-4">
-          <div className="rounded-xl shadow-xl border">
+          <div className="rounded-xl border">
             <div className="tour-detail-title bg-sky-100 flex pl-5 rounded-t-xl">
               <span className="font-bold pt-3">おすすめツアー</span>
             </div>
@@ -261,14 +248,14 @@ export default function TourDetail() {
       </div>
 
       <div className="row w-full mb-20">
-        <div className="tour-detail-comment m-4 w-12/12 border rounded-xl shadow-xl">
+        <div className="tour-detail-comment m-4 w-12/12 border rounded-xl">
           <div className="tour-detail-title bg-sky-100 flex pl-5 rounded-t-xl">
             <span className="font-bold pt-3">クチコミ</span>
           </div>
           <div className="tour-detail-comment-content">
             {
               [1, 2, 3, 4, 5, 6, 7].map(item => {
-                return <div className="m-4 tour-detail-comment-content-item p-4 rounded-xl border shadow">
+                return <div className="m-4 tour-detail-comment-content-item p-4 rounded-xl border">
                   <div className="comment-title flex">
                     <div>
                       <img className="m-2" src="/icon/usericon.jpg" alt="Image" height="45" width="45" />
@@ -326,7 +313,7 @@ export default function TourDetail() {
       </div>
 
       <div id="booking" className="row w-full mb-20">
-        <div className="tour-detail-highlight m-4 w-12/12 border rounded-xl shadow-xl">
+        <div className="tour-detail-highlight m-4 w-12/12 border rounded-xl">
           <div className="tour-detail-title bg-sky-100 flex pl-5 rounded-t-xl">
             <span className="font-bold pt-3">予約する</span>
           </div>
