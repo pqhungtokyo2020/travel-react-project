@@ -9,7 +9,7 @@ export default function TourGroup() {
     }
   }
   return (
-    <div className="items-start text-black-100 m-8 flex-wrap">
+    <div className="items-start text-black-100 mx-8 my-14 flex-wrap">
       <div className="w-full flex flex-wrap">
           <h1 className="pl-3 font-bold text-lg">ワクワクを探しにいこう</h1>
       </div>

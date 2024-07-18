@@ -18,7 +18,7 @@ const MySlider: React.FC<MySliderProps> = ({ images }) => {
     slidesToShow: 1,
     slidesToScroll: 1,
     autoplay: true,
-    autoplaySpeed: 10000,
+    autoplaySpeed: 5000,
     afterChange: (index: number) => setActiveIndex(index),
   };
 

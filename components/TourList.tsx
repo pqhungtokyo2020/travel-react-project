@@ -49,7 +49,7 @@ export default function TourList() {
                     <Link href="tour-detail">
                       {truncateString('ホンダベイ パラワンアイランドホッピング日帰りツアーホンダベイ パラワンアイランドホッピング日帰りツアーホンダベイ パラワンアイランドホッピング日帰りツアー', 20)}
                     </Link>
-                    
+
                     <span className="inline-block ml-5 time-icon text-xs font-normal">
                       <svg className="inline-block" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" width="16" height="16">
                         <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z"></path>
@@ -78,6 +78,44 @@ export default function TourList() {
             </div>
           })
         }
+      </div>
+      <div className="paging mt-5 justify-center w-full flex">
+        <span className="item mx-2 items-center flex justify-center">
+          <Link href="#">&lt;&lt;</Link>
+        </span>
+        <span className="item mx-2 items-center flex justify-center">
+          <Link href="#">01</Link>
+        </span>
+        <span className="item mx-2 items-center flex justify-center">
+          <Link href="#">02</Link>
+        </span>
+        <span className="item mx-2 items-center flex justify-center">
+          <Link href="#">03</Link>
+        </span>
+        <span className="item mx-2 items-center flex justify-center">
+          <Link href="#">04</Link>
+        </span>
+        <span className="item mx-2 items-center flex justify-center">
+          <Link href="#">05</Link>
+        </span>
+        <span className="item mx-2 items-center flex justify-center">
+          <Link href="#">06</Link>
+        </span>
+        <span className="item mx-2 items-center flex justify-center">
+          <Link href="#">07</Link>
+        </span>
+        <span className="item mx-2 items-center flex justify-center">
+          <Link href="#">08</Link>
+        </span>
+        <span className="item mx-2 items-center flex justify-center">
+          <Link href="#">09</Link>
+        </span>
+        <span className="item mx-2 items-center flex justify-center">
+          <Link href="#">10</Link>
+        </span>
+        <span className="item mx-2 items-center flex justify-center">
+          <Link href="#">&gt;&gt;</Link>
+        </span>
       </div>
     </div>
   );

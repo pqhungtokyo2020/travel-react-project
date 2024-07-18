@@ -58,6 +58,7 @@
 
 .sticky-top {
   background: #FFFFFF;
+  box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
 }
 
 .btn-login {
@@ -404,7 +405,7 @@
 *Tour Style Start
 */
 .tour-card-list {
-  @apply flex p-6 items-start text-black-100 m-8 flex-wrap;
+  @apply flex p-6 items-start text-black-100 mx-8 mt-4 flex-wrap;
 }
 
 .title-banner {
